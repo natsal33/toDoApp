@@ -12,6 +12,7 @@ function addTask(e){
     
     // Create new li element
     var li = document.createElement('li');
+    li.className = "taskItem";
     li.appendChild(document.createTextNode(newTask));
 
     // Create delete button
@@ -29,9 +30,9 @@ function removeTask(click) {
     if(click.target.classList.contains('delete')) {
         var li = click.target.parentElement;
         taskList.removeChild(li);
-    } else if(click.target.className === 'strikethrough'){
+    } else if(click.target.classList.contains('strikethrough')){
         click.target.classList.remove('strikethrough');
     } else {
-        click.target.className = 'strikethrough';
+        click.target.classList.add('strikethrough');
     }
 }

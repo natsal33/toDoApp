@@ -1,9 +1,29 @@
 * {
-    align-items: center;
     color: white;
     background-color: black;
+    text-align: center;
 }
 
-.strikethrough {
+
+
+ul {
+    text-align: center;
+    
+}
+
+.taskItem {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    border: white 1px solid;
+    width: 500px;
+    margin: auto auto;
+}
+
+li.strikethrough {
     text-decoration: line-through;
+}
+
+button .delete {
+    float: right;
 }
